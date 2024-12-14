@@ -37,11 +37,11 @@
 
 | 元器件 | 参数                                                                                                                                                                               |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CPU    | 8xA55\@1.5GHz                                                                                                                                                                      |
-| RAM    | 4GB/8GB LPDDR4                                                                                                                                                                     |
+| CPU    | 8x A55@1.5GHz                                                                                                                                                                      |
+| RAM    | 4GB / 8GB LPDDR4                                                                                                                                                                   |
 | BPU    | 10 TOPS                                                                                                                                                                            |
-| GPU    | 32Gflops                                                                                                                                                                           |
-| 储存   | NA, supports external Micro SD card Peripheral                                                                                                                                     |
+| GPU    | 32 GFlops                                                                                                                                                                          |
+| 储存   | 使用外部Micro SD卡作为存储（自行购买）                                                                                                                                             |
 | 多媒体 | H.265 (HEVC) Main Profile @ L5.1, H.264 (AVC) Baseline/Constrained Baseline/Main/High Profiles @ L5.2 with SVC-T encoding, H.265/H.264 encoding and decoding up to 3840x2160@60fps |
 
 RDK X5 提供了网口、USB、摄像头、LCD、HDMI、CANFD、40PIN等功能接口，方便用户进行图像多媒体、深度学习算法等应用的开发和测试。开发板接口布局如下：
