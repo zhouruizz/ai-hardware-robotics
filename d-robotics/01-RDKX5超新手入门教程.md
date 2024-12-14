@@ -23,6 +23,7 @@
     - [摄像头图像本地保存](#摄像头图像本地保存)
       - [环境准备](#环境准备)
       - [运行方式](#运行方式)
+      - [预期效果](#预期效果)
   - [ROS 应用](#ros-应用)
     - [功能介绍](#功能介绍)
     - [使用 MIPI 摄像头发布图片](#使用-mipi-摄像头发布图片)
@@ -30,7 +31,7 @@
 
 ## 如何购买
 
-第一步就是 买板子 ！大家可以去到 [RDK官网](https://developer.d-robotics.cc/rdkx5#:~:text=Ubuntu%2022.04-,%E8%B4%AD%E4%B9%B0%E6%B8%A0%E9%81%93,-%E2%80%A2%C2%A0%C2%A0%E5%AE%98%E6%96%B9%E8%AE%A4%E8%AF%81%E5%88%86%E9%94%80)进行购买
+第一步就是 买板子 啦！大家可以去到 [RDK官网](https://developer.d-robotics.cc/rdkx5#:~:text=Ubuntu%2022.04-,%E8%B4%AD%E4%B9%B0%E6%B8%A0%E9%81%93,-%E2%80%A2%C2%A0%C2%A0%E5%AE%98%E6%96%B9%E8%AE%A4%E8%AF%81%E5%88%86%E9%94%80) 进行购买
 
 ## RDK X5 规格参数
 
@@ -72,7 +73,9 @@ RDK X5开发板通过 USB Type C 接口供电，需要使用支持 **5V/3A** 的
 
 RDK X5开发板采用 Micro SD 存储卡作为系统启动介质，推荐至少 `8GB` 容量的存储卡，以便满足 Ubuntu 系统、应用功能软件对存储空间的需求。
 
-**注意** SD 卡选择的型号，参考 1元/1G 的价格去买，我买过便宜的会导致系统启动失败！
+> [!IMPORTANT]
+> 
+> SD 卡选择的型号，参考 1元/1G 的价格去买，我买过便宜的会导致系统启动失败！
 
 #### 显示
 
@@ -86,7 +89,7 @@ RDK X5开发板支持以太网、Wi-Fi 两种网络接口，用户可通过任�
 
 RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形化交互。
 
-> [!CAUTION]
+> [!NOTE]
 > 
 > **RDK X5 Module**出厂已经烧写测试版本系统镜像，为确保使用最新版本的系统，<font color='Red'>建议参考本文档完成最新版本系统镜像的烧写</font>。
 > 
@@ -228,7 +231,7 @@ sunrise@ubuntu:/app/cdev_demo/vio_capture$ sudo ./capture -b 16 -c 10 -h 1080 -w
 - `-h`: 保存图像的高度
 
 
-- **预期效果：**
+#### 预期效果
 
 程序正确运行后，当前目录保存指定数量的图片文件，`RAW` 格式以 `raw_*.raw` 方式命名，`YUV` 格式以 `yuv_*.yuv` 方式命名。运行log如下：
 
@@ -266,17 +269,41 @@ temp_ptr.data_size[0]:4147200
 ... 省略 ...
 ```
 
+保存的文件：
+
+```bash
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_0.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_1.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_2.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_3.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_4.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_5.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_6.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_7.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_8.raw
+-rw-r--r-- 1 root video 4147200 Dec 14 12:38 raw_9.raw
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_0.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_1.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_2.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_3.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_4.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_5.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_6.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_7.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_8.yuv
+-rw-r--r-- 1 root video 3110400 Dec 14 12:38 yuv_9.yuv
+```
+
 ## ROS 应用
 
 ### 功能介绍
 
-YOLO目标检测算法示例使用图片作为输入，利用 BPU 进行算法推理，发布包含目标类别和检测框的算法msg。
+本示例示例使用摄像头作为输入，利用 BPU 进行算法推理，发布包含目标类别和检测框的算法msg。
 
 模型使用[COCO数据集](http://cocodataset.org/)进行训练，支持的目标检测类型包括人、动物、水果、交通工具等共 80 种类型。
 
 代码仓库：https://github.com/D-Robotics/hobot_dnn
 
-应用场景：YOLO系列作为单阶段目标检测中的代表算法，具有速度快，泛化性好的优点，可实现垃圾识别、车辆检测等功能，主要应用于自动驾驶、智能家居等领域。
 
 ### 使用 MIPI 摄像头发布图片
 
