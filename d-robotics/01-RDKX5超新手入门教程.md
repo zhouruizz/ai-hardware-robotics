@@ -132,19 +132,17 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 
 首先保持开发板**断电**，然后将制作好的存储卡插入开发板的 Micro SD 卡槽，并通过 HDMI 线缆连接开发板与显示器，最后给开发板上电。
 
-系统首次启动时会进行默认环境配置，整个过程持续45秒左右，配置结束后会在显示器输出 Ubuntu 系统桌面。
+系统首次启动时会进行默认环境配置，整个过程持续45秒左右，配置结束后会在显示器输出 Ubuntu 系统桌面，如下图：
+
+![image-desktop_display.jpg](https://developer.d-robotics.cc/rdk_doc/assets/images/image-desktop_display-7b73c6fb12cd3b20372172194a712ec7.jpg)
 
 > [!TIP]
 > 开发板指示灯说明
 > **<font color='Green'>绿色</font>** 指示灯：点亮代表硬件上电正常
 > 
 > 如果开发板上电后长时间没有显示输出（2分钟以上），说明开发板启动异常。需要通过串口线进行调试，查看开发板是否正常。
-
-Ubuntu Desktop 版本系统启动完成后，会通过 HDMI 接口在显示器上输出系统桌面，如下图：
-
-![image-desktop_display.jpg](https://developer.d-robotics.cc/rdk_doc/assets/images/image-desktop_display-7b73c6fb12cd3b20372172194a712ec7.jpg)
-
-如果是没烧录桌面版的同学，可以看下是否有 橙色灯 亮起，如果亮起则表明系统起来了，可以开始玩耍了！
+> 
+> 如果没有接入显示器同学，可以看下 绿色电源灯 的 附近 是否有 橙色灯 亮起，如果亮起则表明系统起来了，可以开始玩耍了！
 
 ### 常见问题
 
