@@ -32,7 +32,11 @@
 
 ## 如何购买
 
-第一步就是 买板子 啦！大家可以去到 [RDK官网](https://developer.d-robotics.cc/rdkx5#:~:text=Ubuntu%2022.04-,%E8%B4%AD%E4%B9%B0%E6%B8%A0%E9%81%93,-%E2%80%A2%C2%A0%C2%A0%E5%AE%98%E6%96%B9%E8%AE%A4%E8%AF%81%E5%88%86%E9%94%80) 进行购买
+第一步就是 买板子 啦！大家可以去到 [RDK官网](https://developer.d-robotics.cc/) 进行购买
+
+收到的板子会带一个盒子，非常美观：
+
+![实物图](https://github.com/user-attachments/assets/407ec1fe-da6d-4c58-a1ac-e74c4a5549f2)
 
 ## RDK X5 规格参数
 
@@ -47,15 +51,19 @@
 
 RDK X5 提供了网口、USB、摄像头、LCD、HDMI、CANFD、40PIN等功能接口，方便用户进行图像多媒体、深度学习算法等应用的开发和测试。开发板接口布局如下：
 
-![image](https://developer.d-robotics.cc/rdk_doc/assets/images/RDK_X5_interface-fccfc8c221e9eacb4e5d8f4d41b3f9f2.jpg)
+![RDK_X5_interface](https://github.com/user-attachments/assets/8e4b6257-7af5-48e7-b5ae-2eac09065598)
 
 | 序号 | 功能                     | 序号 | 功能                     | 序号 | 功能                    |
 | ---- | ------------------------ | ---- | ------------------------ | ---- | ----------------------- |
-| 1    | 供电接口 （USB Type C）  | 2    | RTC 电池接口             | 3    | 易连接口 （USB Type C） |
+| 1    | 供电接口 （USB Type-C）  | 2    | RTC 电池接口             | 3    | 易连接口 （USB Type-C） |
 | 4    | 调试串口（Micro USB）    | 5    | 2 路 MIPI Camera 接口    | 6    | 千兆以太网口，支持 POE  |
 | 7    | 4 路 USB 3.0 Type A 接口 | 8    | CAN FD 高速接口          | 9    | 40PIN 接口              |
 | 10   | HDMI 显示接口            | 11   | 多标准兼容耳机接口       | 12   | 板载 Wi-Fi 天线         |
 | 13   | TF卡接口（底面）         | 14   | LCD 显示接口（MIPI DSI） |      |                         |
+
+机械尺寸：
+
+![RDK_X5_interface](https://github.com/user-attachments/assets/45da5a6f-1fb9-4283-b4c4-58501c019798)
 
 ## 系统烧录
 
@@ -63,7 +71,7 @@ RDK X5 提供了网口、USB、摄像头、LCD、HDMI、CANFD、40PIN等功能�
 
 #### 供电
 
-RDK X5开发板通过 USB Type C 接口供电，需要使用支持 **5V/3A** 的电源适配器为开发板供电。
+RDK X5开发板通过 USB Type-C 接口供电，需要使用支持 **5V/3A** 的电源适配器为开发板供电。
 
 > [!NOTE]
 > 
@@ -119,7 +127,7 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 
 1. 打开 [balenaEtcher](https://etcher.balena.io/) 工具，点击`Flash from file`按钮，选择解压出来的 `rdk-x5-ubuntu22-preinstalled-desktop-3.1.0-arm64.img` 文件作为烧录镜像 
 
-![image-flash-2](https://developer.d-robotics.cc/rdk_doc/assets/images/image-X3-Update-balena1-a54cac3bbf66265174d8f71de5cbec6d.png)
+![image-flash-1](https://github.com/user-attachments/assets/f8fe00d3-341e-4fec-b492-f85d8488e332)
 
 2. 点击`Select target`按钮，选择对应的 Micro SD 存储卡作为目标存储设备  
 
@@ -135,7 +143,7 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 
 系统首次启动时会进行默认环境配置，整个过程持续45秒左右，配置结束后会在显示器输出 Ubuntu 系统桌面，如下图：
 
-![image-desktop_display.jpg](https://developer.d-robotics.cc/rdk_doc/assets/images/image-desktop_display-7b73c6fb12cd3b20372172194a712ec7.jpg)
+![image-desktop_display](https://github.com/user-attachments/assets/71b86912-e6c1-4639-89fb-b539775d8a5c)
 
 > [!TIP]
 > 开发板指示灯说明
@@ -156,8 +164,8 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 > 注意事项
 > 
 > - **禁止**带电时拔插除 USB、HDMI、网线之外的任何设备
-> - RDK X5 的 Type C USB 接口仅用作供电 
-> - 选用正规品牌的 USB Type C 口供电线，否则会出现供电异常，导致系统异常断电的问题
+> - RDK X5 的 Type-C USB 接口仅用作供电 
+> - 选用正规品牌的 USB Type-C 口供电线，否则会出现供电异常，导致系统异常断电的问题
 
 
 ## YOLO算法测试
@@ -204,7 +212,7 @@ bbox: [530.825439, 513.695679, 555.200256, 536.498352], score: 0.459818, id: 0, 
 ### 摄像头图像本地保存
 
 本示例 `vio_capture` 示例实现了 `MIPI` 摄像头图像采集，并将 `RAW` 和 `YUV` 两种格式的图像本地保存的功能。示例流程框图如下：
-![image-capture](https://developer.d-robotics.cc/rdk_doc/assets/images/image-capture-9be5a7688731716a1100fae6159178ab.jpg)
+![image-capture](https://github.com/user-attachments/assets/fd6903ec-514a-47cc-bf81-35434ac9ccf8)
 
 #### 环境准备
 
@@ -344,7 +352,7 @@ ros2 launch dnn_node_example dnn_node_example.launch.py dnn_example_config_file:
 
 输出 log 显示，发布算法推理结果的 `topic` 为 `hobot_dnn_detection`，订阅图片的 `topic` 为 `/hbmem_img`。
 
-在 PC 端的浏览器输入 `http://IP:8000` 即可查看图像和算法渲染效果（IP为RDK的IP地址）：
+在 PC 端的浏览器输入 `http://IP:8000/TogetheROS/` 即可查看图像和算法渲染效果（IP为RDK的IP地址）：
 
 ![render_web](https://developer.d-robotics.cc/rdk_doc/assets/images/yolov2_render_web-aabc0e6d5533da341af44c67c11e20ee.jpeg)
 
