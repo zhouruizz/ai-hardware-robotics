@@ -235,6 +235,7 @@ bbox: [530.825439, 513.695679, 555.200256, 536.498352], score: 0.459818, id: 0, 
 ### 摄像头图像本地保存
 
 本示例 `vio_capture` 示例实现了 `MIPI` 摄像头图像采集，并将 `RAW` 和 `YUV` 两种格式的图像本地保存的功能。示例流程框图如下：
+
 ![image-capture](https://github.com/user-attachments/assets/fd6903ec-514a-47cc-bf81-35434ac9ccf8)
 
 #### 环境准备
