@@ -127,7 +127,7 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 
 - 准备至少 `8GB` 容量的 Micro SD 卡
 - SD 读卡器
-- 下载镜像烧录工具[balenaEtcher](https://etcher.balena.io/), [balenaEtcher](https://etcher.balena.io/) 是一款支持 Windows/Mac/Linux 等多平台的 PC 端启动盘制作工具。
+- 下载镜像烧录工具[balenaEtcher](https://etcher.balena.io/)，[balenaEtcher](https://etcher.balena.io/) 是一款支持 Windows/Mac/Linux 等多平台的 PC 端启动盘制作工具。
 
 制作SD启动卡流程如下：
 
@@ -140,24 +140,24 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 2. 点击`Select target`按钮，选择对应的 Micro SD 存储卡作为目标存储设备  
 
 <p align="center">
-  <img alt="image-flash-2" src="https://github.com/user-attachments/assets/214bd531-01e5-49c8-9774-3b40b17d52c4"  width="50%"/>
+  <img alt="image-flash-2" src="https://github.com/user-attachments/assets/214bd531-01e5-49c8-9774-3b40b17d52c4" width="50%"/>
 </p>
 
 3. 点击 `现在烧录` 按钮开始烧录
 
 <p align="center">
-  <img alt="image-flash-3" src="https://github.com/user-attachments/assets/0ade8e1f-2d49-4fbf-92a0-bd7bcf92543d"  width="50%"/>
+  <img alt="image-flash-3" src="https://github.com/user-attachments/assets/0ade8e1f-2d49-4fbf-92a0-bd7bcf92543d" width="50%"/>
 </p>
 
 4. 等待 烧录 & 验证 完成
 <p align="center">
-  <img alt="image-flash-4" src="https://github.com/user-attachments/assets/ec6c66c1-7254-472c-9682-54ccb747800f"  width="50%"/>
-  <img alt="image-flash-5" src="https://github.com/user-attachments/assets/b7daeaf2-adaa-4378-81f0-b545cf6cc667" />
+  <img alt="image-flash-4" src="https://github.com/user-attachments/assets/ec6c66c1-7254-472c-9682-54ccb747800f" width="45%"/>
+  <img alt="image-flash-5" src="https://github.com/user-attachments/assets/b7daeaf2-adaa-4378-81f0-b545cf6cc667" width="45%" />
 </p>
 
 5. 待工具提示 `烧录成功` 时，表示镜像烧录完成，可以关闭 `balenaEtcher` 并取出存储卡
 <p align="center">
-  <img alt="image-flash-6" src="https://github.com/user-attachments/assets/68273093-07ea-4d2f-81a4-64099656d00f"  width="50%"/>
+  <img alt="image-flash-6" src="https://github.com/user-attachments/assets/68273093-07ea-4d2f-81a4-64099656d00f" width="50%"/>
 </p>
 
 ### 启动系统
