@@ -36,7 +36,9 @@
 
 收到的板子会带一个盒子，非常美观：
 
-![实物图](https://github.com/user-attachments/assets/407ec1fe-da6d-4c58-a1ac-e74c4a5549f2)
+<p align="center">
+  <img alt="实物图" src="https://github.com/user-attachments/assets/407ec1fe-da6d-4c58-a1ac-e74c4a5549f2" width="50%"/>
+</p>
 
 ## RDK X5 规格参数
 
@@ -51,7 +53,9 @@
 
 RDK X5 提供了网口、USB、摄像头、LCD、HDMI、CANFD、40PIN等功能接口，方便用户进行图像多媒体、深度学习算法等应用的开发和测试。开发板接口布局如下：
 
-![RDK_X5_interface](https://github.com/user-attachments/assets/8e4b6257-7af5-48e7-b5ae-2eac09065598)
+<p align="center">
+  <img alt="RDK_X5_interface" src="https://github.com/user-attachments/assets/8e4b6257-7af5-48e7-b5ae-2eac09065598" width="50%"/>
+</p>
 
 | 序号 | 功能                     | 序号 | 功能                     | 序号 | 功能                    |
 | ---- | ------------------------ | ---- | ------------------------ | ---- | ----------------------- |
@@ -63,7 +67,9 @@ RDK X5 提供了网口、USB、摄像头、LCD、HDMI、CANFD、40PIN等功能�
 
 机械尺寸：
 
-![RDK_X5_interface](https://github.com/user-attachments/assets/45da5a6f-1fb9-4283-b4c4-58501c019798)
+<p align="center">
+  <img alt="RDK_X5_interface" src="https://github.com/user-attachments/assets/45da5a6f-1fb9-4283-b4c4-58501c019798" width="50%"/>
+</p>
 
 ## 系统烧录
 
@@ -127,15 +133,32 @@ RDK套件目前提供 Ubuntu 22.04 系统镜像，可支持 Desktop 桌面图形
 
 1. 打开 [balenaEtcher](https://etcher.balena.io/) 工具，点击`Flash from file`按钮，选择解压出来的 `rdk-x5-ubuntu22-preinstalled-desktop-3.1.0-arm64.img` 文件作为烧录镜像 
 
-![image-flash-1](https://github.com/user-attachments/assets/f8fe00d3-341e-4fec-b492-f85d8488e332)
+<p align="center">
+  <img alt="image-flash-1" src="https://github.com/user-attachments/assets/d2fcc11d-fcb4-4118-a37b-c40433112d10" width="50%"/>
+</p>
 
 2. 点击`Select target`按钮，选择对应的 Micro SD 存储卡作为目标存储设备  
 
-![image-flash-2](https://developer.d-robotics.cc/rdk_doc/assets/images/image-X3-Update-balena3-7ff1f77425e7b508c81b2d1ceff2f640.png)
+<p align="center">
+  <img alt="image-flash-2" src="https://github.com/user-attachments/assets/214bd531-01e5-49c8-9774-3b40b17d52c4"  width="50%"/>
+</p>
 
-3. 点击`Flash`按钮开始烧录，待工具提示`Flash Complete`时，表示镜像烧录完成，可以关闭 balenaEtcher 并取出存储卡
+3. 点击 `现在烧录` 按钮开始烧录
 
-![image-flash-3](https://developer.d-robotics.cc/rdk_doc/assets/images/image-X3-Update-balena4-1741bb9f58f0d1ed04a402111bd75251.png)
+<p align="center">
+  <img alt="image-flash-3" src="https://github.com/user-attachments/assets/0ade8e1f-2d49-4fbf-92a0-bd7bcf92543d"  width="50%"/>
+</p>
+
+4. 等待 烧录 & 验证 完成
+<p align="center">
+  <img alt="image-flash-4" src="https://github.com/user-attachments/assets/ec6c66c1-7254-472c-9682-54ccb747800f"  width="50%"/>
+  <img alt="image-flash-5" src="https://github.com/user-attachments/assets/b7daeaf2-adaa-4378-81f0-b545cf6cc667" />
+</p>
+
+5. 待工具提示 `烧录成功` 时，表示镜像烧录完成，可以关闭 `balenaEtcher` 并取出存储卡
+<p align="center">
+  <img alt="image-flash-6" src="https://github.com/user-attachments/assets/68273093-07ea-4d2f-81a4-64099656d00f"  width="50%"/>
+</p>
 
 ### 启动系统
 
@@ -352,9 +375,7 @@ ros2 launch dnn_node_example dnn_node_example.launch.py dnn_example_config_file:
 
 输出 log 显示，发布算法推理结果的 `topic` 为 `hobot_dnn_detection`，订阅图片的 `topic` 为 `/hbmem_img`。
 
-在 PC 端的浏览器输入 `http://IP:8000/TogetheROS/` 即可查看图像和算法渲染效果（IP为RDK的IP地址）：
-
-![render_web](https://developer.d-robotics.cc/rdk_doc/assets/images/yolov2_render_web-aabc0e6d5533da341af44c67c11e20ee.jpeg)
+在 PC 端的浏览器输入 `http://IP:8000/TogetheROS/` 即可查看图像和算法渲染效果（IP为RDK的IP地址）
 
 ## 结语
 
